@@ -690,7 +690,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\MaximumPasswordAge',
       policy_type    => 'Registry Values',
-      policy_value   => '4,30',
+      policy_value   => '30',
     }
   }
 
@@ -758,7 +758,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\PasswordExpiryWarning',
       policy_type    => 'Registry Values',
-      policy_value   => '4,5',
+      policy_value   => '5',
     }
   }
 
@@ -814,7 +814,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\System\CurrentControlSet\Services\LanManServer\Parameters\AutoDisconnect',
       policy_type    => 'Registry Values',
-      policy_value   => '4,15',
+      policy_value   => '15',
     }
   }
 
