@@ -95,7 +95,7 @@ class harden_windows_server::configure {
         policy_setting => 'SeNetworkLogonRight',
         policy_type    => 'Privilege Rights',
 #        policy_value   => '*S-1-5-32-544,*S-1-5-11,*S-1-5-9',
-        policy_value   => 'set: Administrators, Authenticated Users, Enterprise Domain Controllers',
+        policy_value   => 'set: Administrators, Enterprise Domain Controllers',
       }
     } else {
       local_security_policy { 'Access this computer from the network':
@@ -103,7 +103,7 @@ class harden_windows_server::configure {
         policy_setting => 'SeNetworkLogonRight',
         policy_type    => 'Privilege Rights',
 #        policy_value   => '*S-1-5-32-544,*S-1-5-11',
-        policy_value   => 'set: Administrators, Authenticated Users',
+        policy_value   => 'set: Administrators',
       }
     }
   }
