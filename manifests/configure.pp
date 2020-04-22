@@ -565,7 +565,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'NewAdministratorName',
       policy_type    => 'System Access',
-      policy_value   => '"adminaccount"',
+      policy_value   => 'Administrator',
     }
   }
 
@@ -574,7 +574,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'NewGuestName',
       policy_type    => 'System Access',
-      policy_value   => '"guestaccount"',
+      policy_value   => 'Guest',
     }
   }
 
@@ -927,7 +927,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths\Machine',
       policy_type    => 'Registry Values',
-      policy_value   => '7,System\CurrentControlSet\Control\ProductOptions,System\CurrentControlSet\Control\Server Applications,Software\Microsoft\Windows NT\CurrentVersion',
+      policy_value   => 'System\CurrentControlSet\Control\ProductOptions,System\CurrentControlSet\Control\Server Applications,Software\Microsoft\Windows NT\CurrentVersion',
     }
   }
 
@@ -937,7 +937,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths\Machine',
       policy_type    => 'Registry Values',
-      policy_value   => '7,System\CurrentControlSet\Control\Print\Printers,System\CurrentControlSet\Services\Eventlog,Software\Microsoft\OLAP Server,Software\Microsoft\Windows NT\CurrentVersion\Print,Software\Microsoft\Windows NT\CurrentVersion\Windows,System\CurrentControlSet\Control\ContentIndex,System\CurrentControlSet\Control\Terminal Server,System\CurrentControlSet\Control\Terminal Server\UserConfig,System\CurrentControlSet\Control\Terminal Server\DefaultUserConfiguration,Software\Microsoft\Windows NT\CurrentVersion\Perflib,System\CurrentControlSet\Services\SysmonLog',
+      policy_value   => 'System\CurrentControlSet\Control\Print\Printers,System\CurrentControlSet\Services\Eventlog,Software\Microsoft\OLAP Server,Software\Microsoft\Windows NT\CurrentVersion\Print,Software\Microsoft\Windows NT\CurrentVersion\Windows,System\CurrentControlSet\Control\ContentIndex,System\CurrentControlSet\Control\Terminal Server,System\CurrentControlSet\Control\Terminal Server\UserConfig,System\CurrentControlSet\Control\Terminal Server\DefaultUserConfiguration,Software\Microsoft\Windows NT\CurrentVersion\Perflib,System\CurrentControlSet\Services\SysmonLog',
     }
   }
 
@@ -1088,7 +1088,7 @@ class harden_windows_server::configure {
       ensure         => 'present',
       policy_setting => 'MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\optional',
       policy_type    => 'Registry Values',
-      policy_value   => '7,Defined: (blank)',
+      policy_value   => 'Defined: (blank)',
     }
   }
 
